@@ -122,7 +122,10 @@ struct NoteView: View {
     }
 
     private func sentiment(for text: String) -> Sentiment {
-        let availableTagSchemes = NLTagger.availableTagSchemes(for: .paragraph, language: .english)
+        guard let dominantLanguage = NLLanguageRecognizer.dominantLanguage(for: text) else {
+            return .neutral
+        }
+        let availableTagSchemes = NLTagger.availableTagSchemes(for: .paragraph, language: dominantLanguage)
         guard availableTagSchemes.contains(.sentimentScore) else {
             return .neutral
         }

@@ -7,8 +7,8 @@ import NaturalLanguage
 
 struct ContentView: View {
 
-    @State private var notes: [String] = ["Day was good",
-                                          "Day is not so good"]
+    @State private var notes: [String] = ["My day was good",
+                                          "My day is not so good"]
     @State private var searchText: String = ""
     @State private var selectedNote: String?
 
