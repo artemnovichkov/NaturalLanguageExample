@@ -1,4 +1,4 @@
-# TextEditorExample
+# NaturalLanguageExample
 
 An example project for [Working with Natural Language framework](https://www.artemnovichkov.com/blog/working-with-natural-language-framework) blog post. 
 
